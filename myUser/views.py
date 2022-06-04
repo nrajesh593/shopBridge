@@ -6,6 +6,5 @@ from django.http import HttpResponse
 
 
 def Login(request):
-
     html = "<html><body>Show Time</body></html>"
     return HttpResponse(html)
