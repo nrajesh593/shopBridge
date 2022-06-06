@@ -20,7 +20,6 @@ def searchbyPlayer(request):
 
 
 def searchbyClan(request):
-    goo="welcome"
     template = loader.get_template(
         'supercell/index.html')  # getting our template
     return HttpResponse(template.render())
