@@ -7,7 +7,6 @@ clashofclans = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAt
 
 def index(request):
     r = requests.get('https://api.clashofclans.com/v1/leagues')
-    print(r)
     template = loader.get_template(
         'supercell/index.html')  # getting our template
     return HttpResponse(template.render(r))
