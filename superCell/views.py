@@ -6,12 +6,6 @@ clashofclans = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAt
 
 
 def index(request):
-<<<<<<< HEAD
-    r = requests.get('https://api.clashofclans.com/v1/leagues')
-    template = loader.get_template(
-        'supercell/index.html')  # getting our template
-    return HttpResponse(template.render(r))
-=======
     r = requests.get('https://api.clashofclans.com/v1/leagues',
                      headers={'Authorization': "Bearer "+clashofclans})
     # t = template.loader.get_template('supercell/index.html')
@@ -19,7 +13,6 @@ def index(request):
     # html = t.render(c)
     # return HttpResponse(html)
     return render(request, 'supercell/index.html', {'data': r})
->>>>>>> 45c8fbfa7e923f7bc9c0c74be5d5c072745966c5
 
 
 def searchbyPlayer(request):
