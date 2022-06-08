@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index,name='index'),
     path('supercell/', include('superCell.urls')),
+    path('band/', include('band.urls')),
     path('api/', include('products.urls')),
     path('favicon.ico', RedirectView.as_view(
         url=staticfiles_storage.url('favicon.ico'))),
